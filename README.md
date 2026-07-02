@@ -16,21 +16,6 @@ prototipe single-file HTML menjadi proyek **React + Vite** dengan struktur
 - Tombol WhatsApp mengambang di semua halaman
 - **Foto dummy** siap pakai di `public/images/` — tinggal diganti tanpa ubah kode
 
-## 🏗️ Kenapa OOP?
-
-Sebelumnya seluruh data (wahana, satwa, spot foto, dst) berupa objek
-JavaScript polos yang tersebar dan diakses lewat pengecekan string
-(`if (a.id === "minizoo")`) di banyak tempat. Sekarang setiap jenis
-konten adalah sebuah **class** di `src/models/`:
-
-- `BaseModel` — field & perilaku dasar yang dipakai semua entitas (id, name,
-  image, gradient)
-- `Attraction` — wahana, punya method `hasAnimals()`, `hasPhotoSpots()`, `path`
-- `Animal` — satwa Mini Zoo, punya method `Animal.others()` untuk related content
-- `PhotoSpot` — titik foto, punya method `PhotoSpot.others()`
-- `TicketPackage` — paket tiket, punya method `buildOrderMessage()` untuk WhatsApp
-- `FaqItem` — pasangan tanya-jawab FAQ
-
 **Manfaatnya:**
 - Perubahan perilaku (misal cara membangun pesan WhatsApp) cukup diubah di
   satu tempat (dalam class), bukan dicari-cari di banyak file JSX
