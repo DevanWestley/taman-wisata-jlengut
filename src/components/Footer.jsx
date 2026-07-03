@@ -4,6 +4,9 @@ import StaticMap from "./Common/StaticMap";
 import { attractions, CONTACT, MAPS_URL } from "../data/mockData";
 import { waLink } from "../utils/whatsapp";
 
+// 1. TAMBAHKAN IMPORT LOGO DI SINI (Sesuaikan jika path folder assets Anda berbeda)
+import logoImg from "../assets/logo.jpg"; 
+
 export default function Footer() {
   const navigate = useNavigate();
   const go = (path) => {
@@ -32,14 +35,22 @@ export default function Footer() {
       <div className="px-4 sm:px-6 lg:px-8 pt-10">
         <div className="max-w-7xl mx-auto">
           <h3 className="font-bold text-lg mb-4 flex items-center gap-2"><Ico name="MapPin" size={20} className="text-sky-400" /> Temukan Lokasi Kami</h3>
-          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="group block relative rounded-2xl overflow-hidden shadow-lg aspect-[21/9] sm:aspect-[3/1] border border-white/10">
+          
+          {/* PERBAIKAN UTAMA: Mengubah tag pembungkus 'a' menjadi 'div' agar peta Google Maps bisa digeser/diinteraksi */}
+          <div className="group relative rounded-2xl overflow-hidden shadow-lg aspect-[21/9] sm:aspect-[3/1] border border-white/10">
             <StaticMap />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-            <span className="absolute top-3 left-3 sm:top-4 sm:left-4 inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white text-green-700 text-xs sm:text-sm font-bold shadow-md">
+            
+            {/* Tombol "Buka di Maps" diletakkan melayang di atas peta dengan z-10 agar tetap bisa diklik bebas */}
+            <a 
+              href={MAPS_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="absolute top-3 left-3 sm:top-4 sm:left-4 inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white text-green-700 text-xs sm:text-sm font-bold shadow-md hover:scale-105 transition-transform z-10"
+            >
               <Ico name="MapPin" size={14} /> Buka di Maps <Ico name="ArrowRight" size={12} />
-            </span>
-          </a>
-          <p className="text-white/60 text-xs mt-2">Klik peta untuk membuka rute lengkap di Google Maps</p>
+            </a>
+          </div>
+          <p className="text-white/60 text-xs mt-2">Gunakan mouse atau dua jari (di HP) untuk menggeser peta.</p>
         </div>
       </div>
 
@@ -49,7 +60,14 @@ export default function Footer() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ background: "linear-gradient(135deg,#4FC3F7,#FFC107)" }}><Ico name="TreePine" size={20} className="text-white" /></div>
+                
+                {/* 2. BAGIAN LOGO GAMBAR */}
+                <img 
+                  src={logoImg} 
+                  alt="Logo Taman Wisata Jlengut" 
+                  className="w-10 h-10 rounded-full object-cover shadow-md" 
+                />
+
                 <span className="font-extrabold text-lg">Jlengut</span>
               </div>
               <p className="text-white/70 text-sm leading-relaxed">Destinasi wisata keluarga dan edukasi alam di Klaten, Jawa Tengah. Explore Nature, Learn, and Have Fun Together.</p>
@@ -84,7 +102,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-white/60">
-            <span>© 2026 Taman Wisata Jlengut. Seluruh hak cipta dilindungi.</span>
+            <span>© 2026 Taman Wisata Jlengut UGM. Seluruh hak cipta dilindungi.</span>
             <span>Dibuat dengan 💚 untuk keluarga Indonesia</span>
           </div>
         </div>

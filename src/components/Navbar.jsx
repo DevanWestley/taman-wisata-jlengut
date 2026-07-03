@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Ico from "./Icon";
 import { attractions, zooAnimals, photoSpots } from "../data/mockData";
 import { openWA } from "../utils/whatsapp";
+import logoImg from "../assets/logo.jpg"; 
 
 export default function Navbar() {
   const [mob, setMob] = useState(false);
@@ -33,9 +34,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <button onClick={() => go("/")} className="flex items-center gap-2 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-md transition-transform group-hover:scale-105" style={{ background: "linear-gradient(135deg,#2E7D32,#4FC3F7)" }}>
-              <Ico name="TreePine" size={22} />
-            </div>
+            
+            {}
+            <img 
+              src={logoImg} 
+              alt="Logo Taman Wisata Jlengut" 
+              className="w-10 h-10 lg:w-12 lg:h-12 rounded-full object-cover shadow-md transition-transform group-hover:scale-105" 
+            />
+
             <div>
               <div className={`font-extrabold text-base lg:text-lg leading-tight ${dark ? "text-green-800" : "text-white"}`}>Taman Wisata</div>
               <div className={`font-extrabold text-base lg:text-lg leading-tight -mt-1 ${dark ? "text-sky-400" : "text-white"}`}>Jlengut</div>
