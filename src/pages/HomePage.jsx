@@ -55,9 +55,9 @@ export default function HomePage() {
             <FadeIn><div className="rounded-3xl overflow-hidden shadow-xl aspect-[4/3]"><Pill gradient="linear-gradient(135deg,#2E7D32,#4FC3F7)" image={miscImages.welcome} className="w-full h-full"><Ico name="TreePine" size={80} className="text-white/40" /></Pill></div></FadeIn>
             <FadeIn delay={150}>
               <span className="text-sky-400 font-semibold text-sm uppercase tracking-wide">Selamat Datang</span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 mt-2 mb-4">Taman Wisata <span className="text-green-700">Jlengut</span></h2>
-              <p className="text-gray-600 leading-relaxed mb-4">Berlokasi di tengah kesejukan alam Klaten, Jawa Tengah, Taman Wisata Jlengut hadir sebagai destinasi rekreasi keluarga yang memadukan keindahan alam dengan nilai edukasi. Dirancang khusus agar anak-anak dan orang tua dapat belajar sambil bermain.</p>
-              <p className="text-gray-600 leading-relaxed mb-6">Dari mengenal satwa di Mini Zoo, bermain di Playground, hingga belajar bercocok tanam di Taman Edukasi — setiap sudut Jlengut dirancang untuk menciptakan kenangan berharga bersama keluarga.</p>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-800 mt-2 mb-4">New Taman Wisata <span className="text-green-700">Jlengut</span></h2>
+              <p className="text-gray-600 leading-relaxed mb-4">Berlokasi di tengah kesejukan alam Desa Karangduren, Kecamatan Kebonarum, Kabupaten Klaten, New Taman Wisata Jlengut hadir sebagai destinasi rekreasi keluarga yang memadukan keindahan alam dengan nilai edukasi. Dirancang khusus agar anak-anak dan orang tua dapat belajar sambil bermain.</p>
+              <p className="text-gray-600 leading-relaxed mb-6">Menghadirkan pengalaman belajar yang menyenangkan melalui koleksi satwa mini zoo, kawasan wisata ini juga dilengkapi berbagai fasilitas rekreasi seperti kolam renang, kolam permainan bebek kayuh, dan permainan mobil aki. Setiap sudut Jlengut dirancang untuk menciptakan kenangan berharga bersama keluarga.</p>
               <div className="grid grid-cols-3 gap-4">
                 {homeStats.map((s, i) => (
                   <div key={i} className="text-center p-3 rounded-2xl bg-green-50">
