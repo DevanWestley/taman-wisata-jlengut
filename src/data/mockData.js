@@ -22,17 +22,17 @@
 import { Attraction, Animal, PhotoSpot, TicketPackage, FaqItem } from "../models";
 
 // ─── CONTACT / GLOBAL CONSTANTS ─────────────────────────────────────────────
-export const WA_NUMBER = "6281234567890";
+export const WA_NUMBER = "6285728181484";
 export const MAPS_URL = "https://share.google/H8VbGA4kiB5ICnGIh";
 export const CONTACT = {
   address:
     "Jl. Jlengut Indah, Barepan, Geneng, Karangduren, Kec. Kebonarum, Kabupaten Klaten, Jawa Tengah 57486",
-  phone: "0812-3456-7890",
-  phoneHref: "+6281234567890",
-  email: "info@jlengut.com",
-  instagram: "@tamanwisatajlengut",
-  instagramUrl: "https://instagram.com/tamanwisatajlengut",
-  facebookUrl: "https://facebook.com",
+  phone: "0857-2818-1484",
+  phoneHref: "+6285728181484",
+  email: "newtamanjlengut@gmail.com",
+  instagram: "@newtamanjlengut",
+  instagramUrl: "https://www.instagram.com/newtamanjlengut/",
+  facebookUrl: "https://web.facebook.com/NewTamanJlengut/?_rdc=1&_rdr",
 };
 
 // ─── HERO SLIDES ─────────────────────────────────────────────────────────────
