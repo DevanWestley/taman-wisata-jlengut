@@ -151,7 +151,7 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <button onClick={() => go("/tickets")} className="w-full text-left px-3 py-3 rounded-lg font-medium text-gray-700 hover:bg-green-50">Tickets</button>
+            <button onClick={() => go("/tickets")} className="w-full text-left px-3 py-3 rounded-lg font-medium text-gray-700 hover:bg-green-50">Outbound</button>
             <button onClick={() => go("/info")} className="w-full text-left px-3 py-3 rounded-lg font-medium text-gray-700 hover:bg-green-50">Information Center</button>
             <button onClick={() => go("/about")} className="w-full text-left px-3 py-3 rounded-lg font-medium text-gray-700 hover:bg-green-50">About Us</button>
             <button onClick={() => { openWA(); setMob(false); }} className="w-full mt-2 px-4 py-3 rounded-full font-semibold text-white text-center" style={{ background: "linear-gradient(135deg,#FFC107,#FFB300)" }}>Beli Tiket</button>
