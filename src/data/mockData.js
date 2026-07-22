@@ -39,7 +39,7 @@ export const CONTACT = {
 export const heroSlides = [
   {
     title: "Jelajahi Alam, Belajar, dan Bersenang-senang Bersama",
-    subtitle: "Taman Wisata Jlengut — Destinasi Wisata Keluarga & Edukasi di Klaten",
+    subtitle: "New Taman Jlengut — Destinasi Wisata Keluarga & Edukasi di Klaten",
     image: "/images/hero/slide-1.jpg",
   },
   {
@@ -516,9 +516,9 @@ export const photoSpots = PhotoSpot.fromList(photoSpotsRaw);
 
 // ─── TICKET PRICES ───────────────────────────────────────────────────────────
 const ticketPricesRaw = [
-  { name: "Tiket Reguler", price: "Rp 35.000", desc: "Akses semua wahana umum", popular: false },
-  { name: "Paket Keluarga", price: "Rp 120.000", desc: "4 orang + 1 sesi feeding satwa", popular: true },
-  { name: "Paket Sekolah", price: "Rp 25.000", desc: "Min. 20 peserta + modul edukasi", popular: false },
+  { name: "Paket Hemat", price: "Rp 65.000", desc: "Tiket Masuk, Sewa Tempat, Kebersihan, Trainer Outbound, Dokumentasi, Tour Satwa, Snack", popular: false },
+  { name: "Paket Seru", price: "Rp 75.000", desc: "Tiket Masuk, Sewa Tempat, Kebersihan, Trainer Outbound, Dokumentasi, Tour Satwa, Snack,Tubing", popular: true },
+  { name: "Paket Lengkap", price: "Rp 90.000", desc: "Tiket Masuk, Sewa Tempat, Kebersihan, Trainer Outbound, Dokumentasi, Tour Satwa, Snack,Tubing, Makan", popular: false },
 ];
 export const ticketPrices = TicketPackage.fromList(ticketPricesRaw);
 
